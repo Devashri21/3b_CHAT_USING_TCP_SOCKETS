@@ -14,6 +14,7 @@ SERVER:
 
 CLIENT:
 
+![Screenshot 2025-03-10 111753](https://github.com/user-attachments/assets/4cf2e7d1-1b65-4e81-8e35-a4c5fd1d0ee7)
 
 
 ## OUPUT
@@ -23,8 +24,7 @@ SERVER:
 
 CLIENT:
 
-
-
+![Screenshot 2025-03-10 111832](https://github.com/user-attachments/assets/a831b4dd-a7e6-48d9-b3a1-c5a081f7f933)
 
 
 ## RESULT
