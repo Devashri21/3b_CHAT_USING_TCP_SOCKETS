@@ -8,23 +8,39 @@ To write a python program for creating Chat using TCP Sockets Links.
  server
 4. Send and receive the message using the send function in socket.
 ## PROGRAM
-SERVER:
-
-![Screenshot 2025-03-10 111808](https://github.com/user-attachments/assets/3576ba1b-ee4a-4c94-859a-f04fcf94bfc2)
-
 CLIENT:
 
-![Screenshot 2025-03-10 111753](https://github.com/user-attachments/assets/4cf2e7d1-1b65-4e81-8e35-a4c5fd1d0ee7)
+      import socket
+      s=socket.socket()
+      s.connect(('localhost',8000))
+      while True:
+          msg=input("Client > ")
+          s.send(msg.encode())
+          print("Server > ",s.recv(1024).decode())
+SERVER:
+
+     import socket
+     s=socket.socket()
+     s.bind(('localhost',8000))
+     s.listen(5)
+     c,addr=s.accept()
+     while True:
+         ClientMessage=c.recv(1024).decode()
+         print("Client > ",ClientMessage)
+         msg=input("Server > ")
+         c.send(msg.encode())
 
 
 ## OUPUT
 SERVER:
 
-![Screenshot 2025-03-10 111822](https://github.com/user-attachments/assets/f25b0e13-5c8f-403c-b414-316154c7f393)
+![image](https://github.com/user-attachments/assets/045152fc-07d1-412d-b8ea-2daec980878d)
+
 
 CLIENT:
 
-![Screenshot 2025-03-10 111832](https://github.com/user-attachments/assets/a831b4dd-a7e6-48d9-b3a1-c5a081f7f933)
+![image](https://github.com/user-attachments/assets/dd9edcef-4570-4fe7-b544-218cfba66d40)
+
 
 
 ## RESULT
